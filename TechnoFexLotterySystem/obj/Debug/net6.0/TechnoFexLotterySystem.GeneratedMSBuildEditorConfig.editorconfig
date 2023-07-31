@@ -1,0 +1,61 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = TechnoFexLotterySystem
+build_property.RootNamespace = TechnoFexLotterySystem
+build_property.ProjectDir = D:\aspDotnet\practice\API\Serilog\TechnoFexLotterySystem\TechnoFexLotterySystem\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\aspDotnet\practice\API\Serilog\TechnoFexLotterySystem\TechnoFexLotterySystem
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/aspDotnet/practice/API/Serilog/TechnoFexLotterySystem/TechnoFexLotterySystem/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/aspDotnet/practice/API/Serilog/TechnoFexLotterySystem/TechnoFexLotterySystem/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/aspDotnet/practice/API/Serilog/TechnoFexLotterySystem/TechnoFexLotterySystem/Views/LotterySystem/DisplayWinner.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG90dGVyeVN5c3RlbVxEaXNwbGF5V2lubmVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/aspDotnet/practice/API/Serilog/TechnoFexLotterySystem/TechnoFexLotterySystem/Views/LotterySystem/UploadExcel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG90dGVyeVN5c3RlbVxVcGxvYWRFeGNlbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/aspDotnet/practice/API/Serilog/TechnoFexLotterySystem/TechnoFexLotterySystem/Views/Lottery/StartProcessing.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG90dGVyeVxTdGFydFByb2Nlc3NpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/aspDotnet/practice/API/Serilog/TechnoFexLotterySystem/TechnoFexLotterySystem/Views/Lottery/UploadExcel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG90dGVyeVxVcGxvYWRFeGNlbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/aspDotnet/practice/API/Serilog/TechnoFexLotterySystem/TechnoFexLotterySystem/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/aspDotnet/practice/API/Serilog/TechnoFexLotterySystem/TechnoFexLotterySystem/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/aspDotnet/practice/API/Serilog/TechnoFexLotterySystem/TechnoFexLotterySystem/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/aspDotnet/practice/API/Serilog/TechnoFexLotterySystem/TechnoFexLotterySystem/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/aspDotnet/practice/API/Serilog/TechnoFexLotterySystem/TechnoFexLotterySystem/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-7aglpylabv

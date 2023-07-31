@@ -1,0 +1,27 @@
+﻿<div class="container">
+    <div class="winner">The winner is: @ViewBag.WinnerName (Number: @ViewBag.WinnerNumber)</div>
+    <div class="slot-machine">
+        @foreach (var digit in ViewBag.WinnerNumber)
+        {
+            <span class="slot-item" id="digit-@digit">@digit</span>
+        }
+    </div>
+    <div class="form-group">
+        <a href="javascript:history.back()" class="btn btn-secondary btn-back">Back</a>
+    </div>
+</div>
+
+<script>
+    // JavaScript to trigger the animations
+    const digitElements = document.querySelectorAll('.slot-item');
+
+    const animateDigits = () => {
+        digitElements.forEach((element, index) => {
+            setTimeout(() => {
+                element.classList.add('animate');
+            }, index * 300); // Delay the animations for each digit
+        });
+    };
+
+    animateDigits();
+</script>

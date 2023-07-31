@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "nEE6IK6z6LUJuZs5Yt+jdbUgoJDm0VGvUUu76IMa413bFpn3MJM6KySy3aU25F9mCIDJR7WJob6t4KN0+61XOA==",
+  "success": true,
+  "projectFilePath": "D:\\aspDotnet\\practice\\API\\Serilog\\TechnoFexLotterySystem\\TechnoFexLotterySystem\\TechnoFexLotterySystem.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\97798\\.nuget\\packages\\documentformat.openxml\\2.20.0\\documentformat.openxml.2.20.0.nupkg.sha512",
+    "C:\\Users\\97798\\.nuget\\packages\\system.io.packaging\\4.7.0\\system.io.packaging.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}
