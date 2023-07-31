@@ -1,17 +1,73 @@
-﻿@{
-    ViewData["Title"] = "Lottery Result";
-}
+﻿<style>
+    .slot-machine {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center the content horizontally */
+    }
+
+    .slot-item {
+        border: 2px solid #adadad;
+        background-color: black;
+        color: #59dc59;
+        padding: 10px;
+        font-size: 41px;
+        margin: 0;
+        font-family: fantasy;
+    }
+</style>
 
 <div class="container">
-    <div class="winner">The winner is: <span id="winnerName">@ViewBag.WinnerName</span> (Number: <span id="winnerNumber">@ViewBag.WinnerNumber</span>)</div>
-    <div class="slot-machine">
-        @for (var i = 0; i < ViewBag.WinnerNumber.Length; i++)
-        {
-            <span class="slot-item" id="digit-@i">@ViewBag.WinnerNumber[i]</span>
-        }
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <!-- Center the winner text -->
+            <div class="winner alert alert-info" style="display: none;">
+                <h1>The winner is: <strong><span id="winnerName"></span></strong> </h1>
+                (Number: <span id="winnerNumber"></span>)
+            </div>
+        </div>
     </div>
-    <div class="form-group">
-        <a href="javascript:history.back()" class="btn btn-secondary btn-back">Back</a>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="slot-machine">
+                @foreach (var digit in ViewBag.WinnerNumber)
+                {
+                    <div class="slot-item text-center" style="opacity: 0;"></div> <!-- Empty div for each digit -->
+                }
+            </div>
+        </div>
+    </div>
+   @* <div class="row">
+        <div class="col-md-12 text-center">
+            <!-- Center the winner text -->
+            <div class="winner alert alert-info" style="display: none;">
+
+                dkjfjkdfj
+
+                <h1>Congratulations!!! you have won Rs: 
+                    <strong>
+                        <span id="totalAmount"></span>
+                        </strong> 
+                </h1>
+            </div>
+        </div>
+    </div>*@
+    <br />
+    <hr/>
+   <div class="row">
+    
+        <div class="col-md-12 text-center">
+            <div class="winner alert alert-info" style="display: none;">
+                <h1>The winner is: <strong><span id="totalAmount"></span></strong> </h1>
+                (Number: <span id="winnerNumber"></span>)
+            </div>
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <!-- Center the Back button -->
+            <div class="form-group">
+                <a href="javascript:history.back()" class="btn btn-secondary btn-back">Back</a>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -19,22 +75,39 @@
 
 
 <script>
-    // JavaScript to trigger the animations
-    const digitElements = document.querySelectorAll('.slot-item');
-    const winnerNameElement = document.getElementById('winnerName');
+    const digits = '@ViewBag.WinnerNumber'; // Convert the digits to a string
+    const slotItems = document.querySelectorAll('.slot-item');
+    let index = 0;
 
-    const animateDigits = () => {
-        digitElements.forEach((element, index) => {
+    function displayNextDigit() {
+        if (index < digits.length) {
+            const digit = digits.charAt(index);
+            const slotItem = slotItems[index];
+            slotItem.innerText = digit;
+            slotItem.style.opacity = '1'; // Make the digit visible
+            index++;
+
             setTimeout(() => {
-                element.classList.add('animate');
-            }, index * 300); // Delay the animations for each digit
-        });
-    };
+                displayNextDigit();
+            }, 1000); // 500 milliseconds (0.5 seconds) interval
+        } else {
+            showWinnerInfo(); // Display winner name and number after all digits are displayed
+        }
+    }
 
-    // Delay the winner name animation
+    function showWinnerInfo() {
+        document.querySelector('.winner').style.display = 'block';
+        document.getElementById('winnerName').innerText = '@ViewBag.WinnerName';
+        document.getElementById('winnerNumber').innerText = '@ViewBag.WinnerNumber';
+        document.getElementById('totalAmount').innerText = '@ViewBag.TotalAmount';
+    }
+
+    // Call the function to start displaying digits after a delay (optional)
     setTimeout(() => {
-        winnerNameElement.classList.add('animate');
-    }, digitElements.length * 300);
-
-    animateDigits();
+        displayNextDigit();
+    }, 1000); // Delay the start by 1000 milliseconds (1 second)
 </script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
