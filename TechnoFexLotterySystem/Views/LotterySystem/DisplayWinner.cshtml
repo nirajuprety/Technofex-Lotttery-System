@@ -1,28 +1,59 @@
-﻿<style>
-    .slot-machine {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center; /* Center the content horizontally */
-    }
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roulette Machine Digits</title>
+    <style>
+        body {
+            background-color: aliceblue;
+            font-family: Arial, sans-serif;
+        }
 
-    .slot-item {
-        border: 2px solid #adadad;
-        background-color: black;
-        color: #59dc59;
-        padding: 10px;
-        font-size: 41px;
-        margin: 0;
-        font-family: fantasy;
-    }
-</style>
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-12 text-center">
-            <!-- Center the winner text -->
-            <div class="winner alert alert-info" style="display: none;">
-                <h1>The winner is: <strong><span id="winnerName"></span></strong> </h1>
-                (Number: <span id="winnerNumber"></span>)
+        .slot-machine {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            
+        }
+
+        .slot-item {
+            font-size: 36px;
+            width: 50px;
+            / Adjust this based on your desired digit width / height: 50px;
+            / Adjust this based on your desired digit height / line-height: 50px;
+            text-align: center;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            margin: 5px;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            position: relative;
+            color: darkblue;
+            / Set the color of the digits to dark red /
+        }
+
+        .winner {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: deepskyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <!-- Center the winner text -->
+                <div class="winner" style="display: none;">
+                    <h1>The winner is: <strong><span id="winnerName"></span></strong> </h1>
+                    
+                </div>
             </div>
         </div>
     </div>
@@ -36,30 +67,17 @@
             </div>
         </div>
     </div>
-   @* <div class="row">
-        <div class="col-md-12 text-center">
-            <!-- Center the winner text -->
-            <div class="winner alert alert-info" style="display: none;">
+    <div class="container">
+        <div class="row">
 
-                dkjfjkdfj
-
-                <h1>Congratulations!!! you have won Rs: 
-                    <strong>
-                        <span id="totalAmount"></span>
-                        </strong> 
-                </h1>
+            <div class="col-md-12 text-center">
+                <div class="winner" >
+                    <h1>Total amount won : <strong><span id="totalAmount"></span></strong> </h1>
+                </div>
             </div>
         </div>
-    </div>*@
-    <br />
-    <hr/>
-   <div class="row">
-    
-        <div class="col-md-12 text-center">
-            <div class="winner alert alert-info" style="display: none;">
-                <h1>The winner is: <strong><span id="totalAmount"></span></strong> </h1>
-                (Number: <span id="winnerNumber"></span>)
-            </div>
+    </div>
+
 
     <div class="row">
         <div class="col-md-12 text-center">
@@ -68,43 +86,45 @@
                 <a href="javascript:history.back()" class="btn btn-secondary btn-back">Back</a>
             </div>
         </div>
+
     </div>
-</div>
 
-<script>
-    const digits = '@ViewBag.WinnerNumber'; // Convert the digits to a string
-    const slotItems = document.querySelectorAll('.slot-item');
-    let index = 0;
+    <script>
+        const digits = '@ViewBag.WinnerNumber'; // Convert the digits to a string
+        const slotItems = document.querySelectorAll('.slot-item');
+        let index = 0;
 
-    function displayNextDigit() {
-        if (index < digits.length) {
-            const digit = digits.charAt(index);
-            const slotItem = slotItems[index];
-            slotItem.innerText = digit;
-            slotItem.style.opacity = '1'; // Make the digit visible
-            index++;
+        function displayNextDigit() {
+            if (index < digits.length) {
+                const digit = digits.charAt(index);
+                const slotItem = slotItems[index];
+                slotItem.innerText = digit;
+                slotItem.style.opacity = '1'; // Make the digit visible
+                index++;
 
-            setTimeout(() => {
-                displayNextDigit();
-            }, 1000); // 500 milliseconds (0.5 seconds) interval
-        } else {
-            showWinnerInfo(); // Display winner name and number after all digits are displayed
+                setTimeout(() => {
+                    displayNextDigit();
+                }, 1000); // 500 milliseconds (0.5 seconds) interval
+            } else {
+                showWinnerInfo(); // Display winner name and number after all digits are displayed
+            }
         }
-    }
 
-    function showWinnerInfo() {
-        document.querySelector('.winner').style.display = 'block';
-        document.getElementById('winnerName').innerText = '@ViewBag.WinnerName';
-        document.getElementById('winnerNumber').innerText = '@ViewBag.WinnerNumber';
-        document.getElementById('totalAmount').innerText = '@ViewBag.TotalAmount';
-    }
+        function showWinnerInfo() {
+            document.querySelector('.winner').style.display = 'block';
+            document.getElementById('winnerName').innerText = '@ViewBag.WinnerName';
+            document.getElementById('winnerNumber').innerText = '@ViewBag.WinnerNumber'; 
+            document.getElementById('totalAmount').innerText = '@ViewBag.TotalAmount';
+        }
 
-    // Call the function to start displaying digits after a delay (optional)
-    setTimeout(() => {
-        displayNextDigit();
-    }, 1000); // Delay the start by 1000 milliseconds (1 second)
-</script>
+        // Call the function to start displaying digits after a delay (optional)
+        setTimeout(() => {
+            displayNextDigit();
+        }, 1000); // Delay the start by 1000 milliseconds (1 second)
+    </script>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
