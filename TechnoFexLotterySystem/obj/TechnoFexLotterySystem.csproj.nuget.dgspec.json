@@ -1,26 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "D:\\aspDotnet\\practice\\API\\Serilog\\TechnoFexLotterySystem\\TechnoFexLotterySystem\\TechnoFexLotterySystem.csproj": {}
+    "C:\\Users\\Manish\\Dropbox\\My PC (DESKTOP-8SQ4CU8)\\Desktop\\dotNet\\Intern\\Projects\\LotterySystem\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\TechnoFexLotterySystem.csproj": {}
   },
   "projects": {
-    "D:\\aspDotnet\\practice\\API\\Serilog\\TechnoFexLotterySystem\\TechnoFexLotterySystem\\TechnoFexLotterySystem.csproj": {
+    "C:\\Users\\Manish\\Dropbox\\My PC (DESKTOP-8SQ4CU8)\\Desktop\\dotNet\\Intern\\Projects\\LotterySystem\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\TechnoFexLotterySystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\aspDotnet\\practice\\API\\Serilog\\TechnoFexLotterySystem\\TechnoFexLotterySystem\\TechnoFexLotterySystem.csproj",
+        "projectUniqueName": "C:\\Users\\Manish\\Dropbox\\My PC (DESKTOP-8SQ4CU8)\\Desktop\\dotNet\\Intern\\Projects\\LotterySystem\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\TechnoFexLotterySystem.csproj",
         "projectName": "TechnoFexLotterySystem",
-        "projectPath": "D:\\aspDotnet\\practice\\API\\Serilog\\TechnoFexLotterySystem\\TechnoFexLotterySystem\\TechnoFexLotterySystem.csproj",
-        "packagesPath": "C:\\Users\\97798\\.nuget\\packages\\",
-        "outputPath": "D:\\aspDotnet\\practice\\API\\Serilog\\TechnoFexLotterySystem\\TechnoFexLotterySystem\\obj\\",
+        "projectPath": "C:\\Users\\Manish\\Dropbox\\My PC (DESKTOP-8SQ4CU8)\\Desktop\\dotNet\\Intern\\Projects\\LotterySystem\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\TechnoFexLotterySystem.csproj",
+        "packagesPath": "C:\\Users\\Manish\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Manish\\Dropbox\\My PC (DESKTOP-8SQ4CU8)\\Desktop\\dotNet\\Intern\\Projects\\LotterySystem\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\97798\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Manish\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -63,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

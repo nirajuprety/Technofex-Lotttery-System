@@ -1,9 +1,13 @@
-﻿<div class="container">
-    <div class="winner">The winner is: @ViewBag.WinnerName (Number: @ViewBag.WinnerNumber)</div>
+﻿@{
+    ViewData["Title"] = "Lottery Result";
+}
+
+<div class="container">
+    <div class="winner">The winner is: <span id="winnerName">@ViewBag.WinnerName</span> (Number: <span id="winnerNumber">@ViewBag.WinnerNumber</span>)</div>
     <div class="slot-machine">
-        @foreach (var digit in ViewBag.WinnerNumber)
+        @for (var i = 0; i < ViewBag.WinnerNumber.Length; i++)
         {
-            <span class="slot-item" id="digit-@digit">@digit</span>
+            <span class="slot-item" id="digit-@i">@ViewBag.WinnerNumber[i]</span>
         }
     </div>
     <div class="form-group">
@@ -11,9 +15,13 @@
     </div>
 </div>
 
+<link href="~/css/lottery.css" rel="stylesheet" />
+
+
 <script>
     // JavaScript to trigger the animations
     const digitElements = document.querySelectorAll('.slot-item');
+    const winnerNameElement = document.getElementById('winnerName');
 
     const animateDigits = () => {
         digitElements.forEach((element, index) => {
@@ -22,6 +30,11 @@
             }, index * 300); // Delay the animations for each digit
         });
     };
+
+    // Delay the winner name animation
+    setTimeout(() => {
+        winnerNameElement.classList.add('animate');
+    }, digitElements.length * 300);
 
     animateDigits();
 </script>

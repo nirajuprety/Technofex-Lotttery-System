@@ -1,0 +1,36 @@
+﻿/* lottery.css */
+.slot-machine {
+    display: inline-flex;
+}
+
+.slot-item {
+    font-size: 36px;
+    padding: 5px;
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin: 0 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.animate {
+    animation: slotAnimation 2s ease-in-out;
+}
+
+@keyframes slotAnimation {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-30px);
+    }
+
+    50% {
+        transform: translateY(-60px);
+    }
+
+    75% {
+        transform: translateY(-30px);
+    }
+}
