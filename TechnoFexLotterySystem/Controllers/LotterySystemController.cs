@@ -37,7 +37,7 @@ public class LotterySystemController : Controller
                 System.IO.File.Delete(tempFilePath);
 
                 // Pass the winner's name and number to the DisplayWinner view
-                return RedirectToAction("DisplayWinner", new { winnerName = winner.Name, winnerNumber = winner.Number });
+                return RedirectToAction("DisplayWinner", new { winnerName = winner.Name, winnerNumber = winner.Number, totalAmount = winner.Amount });
             }
             catch (Exception ex)
             {
@@ -77,8 +77,11 @@ public class LotterySystemController : Controller
                 Row selectedRow = sheetData.Elements<Row>().Skip(randomRowIndex).First();
                 Cell nameCell = selectedRow.Elements<Cell>().ElementAtOrDefault(1); // Index 1 corresponds to column B
                 Cell numberCell = selectedRow.Elements<Cell>().ElementAtOrDefault(2); // Index 2 corresponds to column C
+                Cell amountCell = selectedRow.Elements<Cell>().ElementAtOrDefault(3); // Index 2 corresponds to column C
                 winner.Name = GetCellValue(workbookPart, nameCell);
                 winner.Number = GetCellValue(workbookPart, numberCell);
+                winner.Amount= GetCellValue(workbookPart, amountCell);
+
             }
             else
             {
@@ -114,10 +117,11 @@ public class LotterySystemController : Controller
 
         return value;
     }
-    public IActionResult DisplayWinner(string winnerName,string winnerNumber)
+    public IActionResult DisplayWinner(string winnerName,string winnerNumber, string totalAmount)
     {
         ViewBag.WinnerName = winnerName;
         ViewBag.WinnerNumber = winnerNumber;
+        ViewBag.TotalAmount = totalAmount;
         return View();
     }
 }
