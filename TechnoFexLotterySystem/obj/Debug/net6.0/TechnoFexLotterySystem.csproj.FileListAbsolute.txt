@@ -66,3 +66,14 @@ C:\Users\sharm\Desktop\Lottery\Technofex-Lotttery-System\TechnoFexLotterySystem\
 C:\Users\sharm\Desktop\Lottery\Technofex-Lotttery-System\TechnoFexLotterySystem\obj\Debug\net6.0\TechnoFexLotterySystem.pdb
 C:\Users\sharm\Desktop\Lottery\Technofex-Lotttery-System\TechnoFexLotterySystem\obj\Debug\net6.0\TechnoFexLotterySystem.genruntimeconfig.cache
 C:\Users\sharm\Desktop\Lottery\Technofex-Lotttery-System\TechnoFexLotterySystem\obj\Debug\net6.0\ref\TechnoFexLotterySystem.dll
+C:\Users\Manish\Dropbox\My PC (DESKTOP-8SQ4CU8)\Desktop\dotNet\Intern\Projects\LotterySystem\Technofex-Lotttery-System\TechnoFexLotterySystem\obj\Debug\net6.0\TechnoFexLotterySystem.csproj.AssemblyReference.cache
+C:\Users\Manish\Dropbox\My PC (DESKTOP-8SQ4CU8)\Desktop\dotNet\Intern\Projects\LotterySystem\Technofex-Lotttery-System\TechnoFexLotterySystem\obj\Debug\net6.0\TechnoFexLotterySystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Manish\Dropbox\My PC (DESKTOP-8SQ4CU8)\Desktop\dotNet\Intern\Projects\LotterySystem\Technofex-Lotttery-System\TechnoFexLotterySystem\obj\Debug\net6.0\TechnoFexLotterySystem.AssemblyInfoInputs.cache
+C:\Users\Manish\Dropbox\My PC (DESKTOP-8SQ4CU8)\Desktop\dotNet\Intern\Projects\LotterySystem\Technofex-Lotttery-System\TechnoFexLotterySystem\obj\Debug\net6.0\TechnoFexLotterySystem.AssemblyInfo.cs
+C:\Users\Manish\Dropbox\My PC (DESKTOP-8SQ4CU8)\Desktop\dotNet\Intern\Projects\LotterySystem\Technofex-Lotttery-System\TechnoFexLotterySystem\obj\Debug\net6.0\TechnoFexLotterySystem.csproj.CoreCompileInputs.cache
+C:\Users\Manish\Dropbox\My PC (DESKTOP-8SQ4CU8)\Desktop\dotNet\Intern\Projects\LotterySystem\Technofex-Lotttery-System\TechnoFexLotterySystem\obj\Debug\net6.0\TechnoFexLotterySystem.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Manish\Dropbox\My PC (DESKTOP-8SQ4CU8)\Desktop\dotNet\Intern\Projects\LotterySystem\Technofex-Lotttery-System\TechnoFexLotterySystem\obj\Debug\net6.0\TechnoFexLotterySystem.RazorAssemblyInfo.cache
+C:\Users\Manish\Dropbox\My PC (DESKTOP-8SQ4CU8)\Desktop\dotNet\Intern\Projects\LotterySystem\Technofex-Lotttery-System\TechnoFexLotterySystem\obj\Debug\net6.0\TechnoFexLotterySystem.RazorAssemblyInfo.cs
+C:\Users\Manish\Dropbox\My PC (DESKTOP-8SQ4CU8)\Desktop\dotNet\Intern\Projects\LotterySystem\Technofex-Lotttery-System\TechnoFexLotterySystem\obj\Debug\net6.0\TechnoFexLotterySystem.dll
+C:\Users\Manish\Dropbox\My PC (DESKTOP-8SQ4CU8)\Desktop\dotNet\Intern\Projects\LotterySystem\Technofex-Lotttery-System\TechnoFexLotterySystem\obj\Debug\net6.0\refint\TechnoFexLotterySystem.dll
+C:\Users\Manish\Dropbox\My PC (DESKTOP-8SQ4CU8)\Desktop\dotNet\Intern\Projects\LotterySystem\Technofex-Lotttery-System\TechnoFexLotterySystem\obj\Debug\net6.0\TechnoFexLotterySystem.pdb
