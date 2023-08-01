@@ -6,8 +6,15 @@
     <title>Roulette Machine Digits</title>
     <style>
         body {
-            background-color: aliceblue;
             font-family: Arial, sans-serif;
+            background-image: url('TechnoFexLotterySystem\wwwroot\img\canvas.gif');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .bgg {
+            background-color: #D2E5F6;
         }
 
         .container {
@@ -19,14 +26,13 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            
         }
 
         .slot-item {
             font-size: 36px;
             width: 50px;
-            / Adjust this based on your desired digit width / height: 50px;
-            / Adjust this based on your desired digit height / line-height: 50px;
+            height: 50px;
+            line-height: 50px;
             text-align: center;
             background-color: #fff;
             border: 2px solid #ccc;
@@ -35,24 +41,34 @@
             box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
             position: relative;
             color: darkblue;
-            / Set the color of the digits to dark red /
+            font-family: 'Jockey One', sans-serif;
         }
 
         .winner {
             font-size: 24px;
             margin-bottom: 20px;
-            color: deepskyblue;
+            color: #c06b1d;
+            font-family: 'Special Elite', cursive;
+            
         }
     </style>
 </head>
-<body>
+<body class="bgg">
     <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <!-- Center the winner text -->
+                <div style="color: darkblue; font-family: 'Iceland', cursive; ">
+                   <h1 style="font-size: 5rem;">TECHNOFEX LOTTERY SYSTEM</h1>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-12 text-center">
                 <!-- Center the winner text -->
                 <div class="winner" style="display: none;">
                     <h1>The winner is: <strong><span id="winnerName"></span></strong> </h1>
-                    
+                    <h1>Total amount won : <strong><span id="totalAmount">@ViewBag.TotalAmount</span></strong> </h1>
                 </div>
             </div>
         </div>
@@ -67,18 +83,8 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-
-            <div class="col-md-12 text-center">
-                <div class="winner" >
-                    <h1>Total amount won : <strong><span id="totalAmount"></span></strong> </h1>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
+    <br />
+    
     <div class="row">
         <div class="col-md-12 text-center">
             <!-- Center the Back button -->
@@ -86,11 +92,17 @@
                 <a href="javascript:history.back()" class="btn btn-secondary btn-back">Back</a>
             </div>
         </div>
-
     </div>
 
+    <div class="row">
+        <div class="" >
+            <img src="~/img/celeb.gif" class="" width="">
+        </div>
+    </div>
+
+
     <script>
-        const digits = '@ViewBag.WinnerNumber'; // Convert the digits to a string
+        const digits = '@ViewBag.WinnerNumber';    // Convert the digits to a string
         const slotItems = document.querySelectorAll('.slot-item');
         let index = 0;
 
@@ -113,7 +125,7 @@
         function showWinnerInfo() {
             document.querySelector('.winner').style.display = 'block';
             document.getElementById('winnerName').innerText = '@ViewBag.WinnerName';
-            document.getElementById('winnerNumber').innerText = '@ViewBag.WinnerNumber'; 
+            document.getElementById('winnerNumber').innerText = '@ViewBag.WinnerNumber';
             document.getElementById('totalAmount').innerText = '@ViewBag.TotalAmount';
         }
 
@@ -122,7 +134,9 @@
             displayNextDigit();
         }, 1000); // Delay the start by 1000 milliseconds (1 second)
     </script>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Iceland&family=Jockey+One&family=Silkscreen&family=Slackey&family=Special+Elite&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

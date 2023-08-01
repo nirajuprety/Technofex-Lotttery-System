@@ -17,6 +17,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\sharm\\Desktop\\Lottery\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\wwwroot\\img\\canvas.gif",
+      "PackagePath": "staticwebassets\\img\\canvas.gif"
+    },
+    {
+      "Id": "C:\\Users\\sharm\\Desktop\\Lottery\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\wwwroot\\img\\celeb.gif",
+      "PackagePath": "staticwebassets\\img\\celeb.gif"
+    },
+    {
       "Id": "C:\\Users\\sharm\\Desktop\\Lottery\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\wwwroot\\img\\logo.png",
       "PackagePath": "staticwebassets\\img\\logo.png"
     },
