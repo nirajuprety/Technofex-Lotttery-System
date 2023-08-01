@@ -37,12 +37,12 @@ public class LotterySystemController : Controller
                 System.IO.File.Delete(tempFilePath);
 
                 // Pass the winner's name and number to the DisplayWinner view
-                return RedirectToAction("DisplayWinner", new { winnerName = winner.Name, winnerNumber = winner.Number, totalAmount = winner.Amount });
+                return RedirectToAction("DisplayWinner", new { winnerName = winner.Name, winnerNumber = winner.Number, amount = winner.Amount, totalAmount = winner.TotalAmount });
             }
             catch (Exception ex)
             {
                 ViewBag.Message = "Error occurred during the lottery selection: " + ex.Message;
-            }
+            }   
         }
         else
         {
@@ -55,6 +55,7 @@ public class LotterySystemController : Controller
     private LotteryWinner GetRandomWinner(string filePath)
     {
         LotteryWinner winner = new LotteryWinner();
+        decimal totalAmount = 0; // Variable to hold the total amount
 
         // Read the Excel file and select a random row as the winner
         using (SpreadsheetDocument document = SpreadsheetDocument.Open(filePath, false))
@@ -77,11 +78,21 @@ public class LotterySystemController : Controller
                 Row selectedRow = sheetData.Elements<Row>().Skip(randomRowIndex).First();
                 Cell nameCell = selectedRow.Elements<Cell>().ElementAtOrDefault(1); // Index 1 corresponds to column B
                 Cell numberCell = selectedRow.Elements<Cell>().ElementAtOrDefault(2); // Index 2 corresponds to column C
-                Cell amountCell = selectedRow.Elements<Cell>().ElementAtOrDefault(3); // Index 2 corresponds to column C
+                Cell amountCell = selectedRow.Elements<Cell>().ElementAtOrDefault(3); // Index 2 corresponds to column C // Index 2 corresponds to column C
                 winner.Name = GetCellValue(workbookPart, nameCell);
                 winner.Number = GetCellValue(workbookPart, numberCell);
                 winner.Amount= GetCellValue(workbookPart, amountCell);
 
+                // Calculate the total amount from the selected column (column D)
+                foreach (Row row in sheetData.Elements<Row>())
+                {
+                    if (row.RowIndex > 1) // Skip the header row (assuming it is the first row)
+                    {
+                        Cell cell = row.Elements<Cell>().ElementAtOrDefault(3); // Index 3 corresponds to column D
+                        decimal.TryParse(GetCellValue(workbookPart, cell), out decimal amount);
+                        totalAmount += amount;
+                    }
+                }
             }
             else
             {
@@ -89,7 +100,7 @@ public class LotterySystemController : Controller
                 winner.Number = string.Empty;
             }
         }
-
+        winner.TotalAmount = totalAmount;
         return winner;
     }
 
@@ -117,10 +128,11 @@ public class LotterySystemController : Controller
 
         return value;
     }
-    public IActionResult DisplayWinner(string winnerName,string winnerNumber, string totalAmount)
+    public IActionResult DisplayWinner(string winnerName,string winnerNumber, string Amount, double totalAmount)
     {
         ViewBag.WinnerName = winnerName;
         ViewBag.WinnerNumber = winnerNumber;
+        ViewBag.Amount = Amount;
         ViewBag.TotalAmount = totalAmount;
         return View();
     }

@@ -17,6 +17,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Manish\\Dropbox\\My PC (DESKTOP-8SQ4CU8)\\Desktop\\dotNet\\Intern\\Projects\\LotterySystem\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\wwwroot\\img\\confetti-4.gif.webp",
+      "PackagePath": "staticwebassets\\img\\confetti-4.gif.webp"
+    },
+    {
+      "Id": "C:\\Users\\Manish\\Dropbox\\My PC (DESKTOP-8SQ4CU8)\\Desktop\\dotNet\\Intern\\Projects\\LotterySystem\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\wwwroot\\img\\giphy.gif",
+      "PackagePath": "staticwebassets\\img\\giphy.gif"
+    },
+    {
+      "Id": "C:\\Users\\Manish\\Dropbox\\My PC (DESKTOP-8SQ4CU8)\\Desktop\\dotNet\\Intern\\Projects\\LotterySystem\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\wwwroot\\img\\giphy.webp",
+      "PackagePath": "staticwebassets\\img\\giphy.webp"
+    },
+    {
       "Id": "C:\\Users\\Manish\\Dropbox\\My PC (DESKTOP-8SQ4CU8)\\Desktop\\dotNet\\Intern\\Projects\\LotterySystem\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\wwwroot\\img\\logo.png",
       "PackagePath": "staticwebassets\\img\\logo.png"
     },
