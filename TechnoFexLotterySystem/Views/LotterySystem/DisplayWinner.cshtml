@@ -1,28 +1,75 @@
-﻿<style>
-    .slot-machine {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center; /* Center the content horizontally */
-    }
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roulette Machine Digits</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('TechnoFexLotterySystem\wwwroot\img\canvas.gif');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
 
-    .slot-item {
-        border: 2px solid #adadad;
-        background-color: black;
-        color: #59dc59;
-        padding: 10px;
-        font-size: 41px;
-        margin: 0;
-        font-family: fantasy;
-    }
-</style>
+        .bgg {
+            background-color: #D2E5F6;
+        }
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-12 text-center">
-            <!-- Center the winner text -->
-            <div class="winner alert alert-info" style="display: none;">
-                <h1>The winner is: <strong><span id="winnerName"></span></strong> </h1>
-                (Number: <span id="winnerNumber"></span>)
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .slot-machine {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .slot-item {
+            font-size: 36px;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            margin: 5px;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            position: relative;
+            color: darkblue;
+            font-family: 'Jockey One', sans-serif;
+        }
+
+        .winner {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #c06b1d;
+            font-family: 'Special Elite', cursive;
+            
+        }
+    </style>
+</head>
+<body class="bgg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <!-- Center the winner text -->
+                <div style="color: darkblue; font-family: 'Iceland', cursive; ">
+                   <h1 style="font-size: 5rem;">TECHNOFEX LOTTERY SYSTEM</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <!-- Center the winner text -->
+                <div class="winner" style="display: none;">
+                    <h1>The winner is: <strong><span id="winnerName"></span></strong> </h1>
+                    <h1>Total amount won : <strong><span id="totalAmount">@ViewBag.TotalAmount</span></strong> </h1>
+                </div>
             </div>
         </div>
     </div>
@@ -36,31 +83,8 @@
             </div>
         </div>
     </div>
-   @* <div class="row">
-        <div class="col-md-12 text-center">
-            <!-- Center the winner text -->
-            <div class="winner alert alert-info" style="display: none;">
-
-                dkjfjkdfj
-
-                <h1>Congratulations!!! you have won Rs: 
-                    <strong>
-                        <span id="totalAmount"></span>
-                        </strong> 
-                </h1>
-            </div>
-        </div>
-    </div>*@
     <br />
-    <hr/>
-   <div class="row">
     
-        <div class="col-md-12 text-center">
-            <div class="winner alert alert-info" style="display: none;">
-                <h1>The winner is: <strong><span id="totalAmount"></span></strong> </h1>
-                (Number: <span id="winnerNumber"></span>)
-            </div>
-
     <div class="row">
         <div class="col-md-12 text-center">
             <!-- Center the Back button -->
@@ -69,42 +93,52 @@
             </div>
         </div>
     </div>
-</div>
 
-<script>
-    const digits = '@ViewBag.WinnerNumber'; // Convert the digits to a string
-    const slotItems = document.querySelectorAll('.slot-item');
-    let index = 0;
+    <div class="row">
+        <div class="" >
+            <img src="~/img/celeb.gif" class="" width="">
+        </div>
+    </div>
 
-    function displayNextDigit() {
-        if (index < digits.length) {
-            const digit = digits.charAt(index);
-            const slotItem = slotItems[index];
-            slotItem.innerText = digit;
-            slotItem.style.opacity = '1'; // Make the digit visible
-            index++;
 
-            setTimeout(() => {
-                displayNextDigit();
-            }, 1000); // 500 milliseconds (0.5 seconds) interval
-        } else {
-            showWinnerInfo(); // Display winner name and number after all digits are displayed
+    <script>
+        const digits = '@ViewBag.WinnerNumber';    // Convert the digits to a string
+        const slotItems = document.querySelectorAll('.slot-item');
+        let index = 0;
+
+        function displayNextDigit() {
+            if (index < digits.length) {
+                const digit = digits.charAt(index);
+                const slotItem = slotItems[index];
+                slotItem.innerText = digit;
+                slotItem.style.opacity = '1'; // Make the digit visible
+                index++;
+
+                setTimeout(() => {
+                    displayNextDigit();
+                }, 1000); // 500 milliseconds (0.5 seconds) interval
+            } else {
+                showWinnerInfo(); // Display winner name and number after all digits are displayed
+            }
         }
-    }
 
-    function showWinnerInfo() {
-        document.querySelector('.winner').style.display = 'block';
-        document.getElementById('winnerName').innerText = '@ViewBag.WinnerName';
-        document.getElementById('winnerNumber').innerText = '@ViewBag.WinnerNumber';
-        document.getElementById('totalAmount').innerText = '@ViewBag.TotalAmount';
-    }
+        function showWinnerInfo() {
+            document.querySelector('.winner').style.display = 'block';
+            document.getElementById('winnerName').innerText = '@ViewBag.WinnerName';
+            document.getElementById('winnerNumber').innerText = '@ViewBag.WinnerNumber';
+            document.getElementById('totalAmount').innerText = '@ViewBag.TotalAmount';
+        }
 
-    // Call the function to start displaying digits after a delay (optional)
-    setTimeout(() => {
-        displayNextDigit();
-    }, 1000); // Delay the start by 1000 milliseconds (1 second)
-</script>
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        // Call the function to start displaying digits after a delay (optional)
+        setTimeout(() => {
+            displayNextDigit();
+        }, 1000); // Delay the start by 1000 milliseconds (1 second)
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Iceland&family=Jockey+One&family=Silkscreen&family=Slackey&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -37,7 +37,11 @@ public class LotterySystemController : Controller
                 System.IO.File.Delete(tempFilePath);
 
                 // Pass the winner's name and number to the DisplayWinner view
-                return RedirectToAction("DisplayWinner", new { winnerName = winner.Name, winnerNumber = winner.Number, totalAmount = winner.Amount });
+                TempData["WinnerName"] = winner.Name;
+                TempData["WinnerNumber"] = winner.Number;
+                TempData["TotalAmount"] = winner.TotalAmount; 
+                TempData["Amount"] = winner.Amount.ToString();
+                return RedirectToAction("DisplayWinner");
             }
             catch (Exception ex)
             {
@@ -55,6 +59,7 @@ public class LotterySystemController : Controller
     private LotteryWinner GetRandomWinner(string filePath)
     {
         LotteryWinner winner = new LotteryWinner();
+        decimal totalAmount = 0; // Variable to hold the total amount
 
         // Read the Excel file and select a random row as the winner
         using (SpreadsheetDocument document = SpreadsheetDocument.Open(filePath, false))
@@ -73,15 +78,33 @@ public class LotterySystemController : Controller
                 Random random = new Random();
                 int randomRowIndex = random.Next(1, rowCount + 1);
 
-                // Find the selected row and extract the data (assuming column B contains names and column C contains numbers)
+                // Find the selected row and extract the data (assuming column B contains names, column C contains numbers, and column D contains amounts)
                 Row selectedRow = sheetData.Elements<Row>().Skip(randomRowIndex).First();
                 Cell nameCell = selectedRow.Elements<Cell>().ElementAtOrDefault(1); // Index 1 corresponds to column B
                 Cell numberCell = selectedRow.Elements<Cell>().ElementAtOrDefault(2); // Index 2 corresponds to column C
-                Cell amountCell = selectedRow.Elements<Cell>().ElementAtOrDefault(3); // Index 2 corresponds to column C
+                Cell amountCell = selectedRow.Elements<Cell>().ElementAtOrDefault(3); // Index 3 corresponds to column D
                 winner.Name = GetCellValue(workbookPart, nameCell);
                 winner.Number = GetCellValue(workbookPart, numberCell);
-                winner.Amount= GetCellValue(workbookPart, amountCell);
 
+                // Convert the amount value to a decimal
+                if (decimal.TryParse(GetCellValue(workbookPart, amountCell), out decimal amount))
+                {
+                    winner.Amount = amount.ToString();
+                    totalAmount += amount;
+                }
+
+                // Calculate the total amount from the selected column (column D) for all rows
+                foreach (Row row in sheetData.Elements<Row>())
+                {
+                    if (row.RowIndex > 1) // Skip the header row (assuming it is the first row)
+                    {
+                        Cell cell = row.Elements<Cell>().ElementAtOrDefault(3); // Index 3 corresponds to column D
+                        if (decimal.TryParse(GetCellValue(workbookPart, cell), out amount))
+                        {
+                            totalAmount += amount;
+                        }
+                    }
+                }
             }
             else
             {
@@ -90,6 +113,7 @@ public class LotterySystemController : Controller
             }
         }
 
+        winner.TotalAmount = totalAmount.ToString();
         return winner;
     }
 
@@ -117,11 +141,21 @@ public class LotterySystemController : Controller
 
         return value;
     }
-    public IActionResult DisplayWinner(string winnerName,string winnerNumber, string totalAmount)
+    public IActionResult DisplayWinner()
     {
+        
+        // Retrieve winner's name, number, and amount from TempData
+        string winnerName = TempData["WinnerName"] as string;
+        string winnerNumber = TempData["WinnerNumber"] as string;
+        string totalAmount = TempData["TotalAmount"] as string;
+        string amount = TempData["Amount"] as string;
+
+        // Pass the data to the view using ViewBag (or create a view model if needed)
         ViewBag.WinnerName = winnerName;
         ViewBag.WinnerNumber = winnerNumber;
         ViewBag.TotalAmount = totalAmount;
+
+        // The data will be available in the view, and it won't be displayed in the URL
         return View();
     }
 }
