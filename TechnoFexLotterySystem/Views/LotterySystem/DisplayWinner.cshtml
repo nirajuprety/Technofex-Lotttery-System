@@ -49,7 +49,12 @@
             margin-bottom: 20px;
             color: #c06b1d;
             font-family: 'Special Elite', cursive;
-            
+        }
+
+        .leftimage {
+            position: absolute;
+            top: 50%;
+            left: 100%;
         }
     </style>
 </head>
@@ -59,7 +64,7 @@
             <div class="col-md-12 text-center">
                 <!-- Center the winner text -->
                 <div style="color: darkblue; font-family: 'Iceland', cursive; ">
-                   <h1 style="font-size: 5rem;">TECHNOFEX LOTTERY SYSTEM</h1>
+                    <h1 style="font-size: 5rem;">TECHNOFEX LOTTERY SYSTEM</h1>
                 </div>
             </div>
         </div>
@@ -67,38 +72,44 @@
             <div class="col-md-12 text-center">
                 <!-- Center the winner text -->
                 <div class="winner" style="display: none;">
-                    <h1>The winner is: <strong><span id="winnerName"></span></strong> </h1>
-                    <h1>Total amount won : <strong><span id="totalAmount">@ViewBag.TotalAmount</span></strong> </h1>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img src="~/img/celeb.gif" class="" width="" height="300px">
+                        </div>
+                        <div class="col-lg-4">
+                            <h1>Congratulations, <strong><span id="winnerName"></span></strong> </h1>
+                            <h1>You have Won Rs. <strong><span id="totalAmount">@ViewBag.TotalAmount</span></strong> </h1>
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="~/img/celeb.gif" class="" width="" height="300px">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="slot-machine">
-                @foreach (var digit in ViewBag.WinnerNumber)
-                {
-                    <div class="slot-item text-center" style="opacity: 0;"></div> <!-- Empty div for each digit -->
-                }
+        <div class="row">
+            <div class="col-md-12">
+                <div class="slot-machine">
+                    @foreach (var digit in ViewBag.WinnerNumber)
+                    {
+                        <div class="slot-item text-center" style="opacity: 0;"></div> <!-- Empty div for each digit -->
+                    }
+                </div>
             </div>
         </div>
-    </div>
-    <br />
-    
-    <div class="row">
-        <div class="col-md-12 text-center">
-            <!-- Center the Back button -->
-            <div class="form-group">
-                <a href="javascript:history.back()" class="btn btn-secondary btn-back">Back</a>
+        <br />
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <!-- Center the Back button -->
+                <div class="form-group">
+                    <a href="javascript:history.back()" class="btn btn-secondary btn-back">Back</a>
+                </div>
             </div>
         </div>
+       
     </div>
 
-    <div class="row">
-        <div class="" >
-            <img src="~/img/celeb.gif" class="" width="">
-        </div>
-    </div>
 
 
     <script>
