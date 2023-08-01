@@ -153,7 +153,6 @@ public class LotterySystemController : Controller
         // Pass the data to the view using ViewBag (or create a view model if needed)
         ViewBag.WinnerName = winnerName;
         ViewBag.WinnerNumber = winnerNumber;
-        ViewBag.Amount = Amount;
         ViewBag.TotalAmount = totalAmount;
 
         // The data will be available in the view, and it won't be displayed in the URL
