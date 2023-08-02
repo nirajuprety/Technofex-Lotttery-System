@@ -23,10 +23,13 @@
         }
 
         .slot-machine {
+            
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
         }
+
+           
 
         .slot-item {
             font-size: 36px;
@@ -41,8 +44,29 @@
             box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
             position: relative;
             color: darkblue;
-            font-family: 'Jockey One', sans-serif;
+            font-family: 'clarendon-bold', sans-serif;
         }
+
+            .slot-item::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 20px; /* Adjust this height to control the shadow size */
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)); /* Adjust the opacity and colors as needed */
+            }
+
+            /* Shadow on bottom */
+            .slot-item::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 20px; /* Adjust this height to control the shadow size */
+                background: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)); /* Adjust the opacity and colors as needed */
+            }
 
         .winner {
             font-size: 24px;
@@ -56,6 +80,26 @@
             top: 50%;
             left: 100%;
         }
+
+        .btn-back {
+            padding: 10px 20px; /* Adjust the padding to control the button size */
+            background-color: #007bff; /* Customize the button background color */
+            color: #ffffff; /* Customize the button text color */
+            border-radius: 5px; /* Add rounded corners to the button */
+            font-size: 16px; /* Adjust the font size as needed */
+            text-decoration: none; /* Remove the default underline */
+            transition: background-color 0.2s; /* Add a smooth transition effect */
+        }
+
+        .bottom-right-image {
+            position: fixed;
+            bottom: 20px; /* Adjust the distance from the bottom */
+            right: 20px; /* Adjust the distance from the right */
+            width: 300px; /* Adjust the image width as needed */
+            height: 50px; /* Adjust the image height as needed */
+            z-index: 999; /* Set a higher z-index to make sure it stays above other elements */
+        }
+
     </style>
 </head>
 <body class="bgg">
@@ -74,14 +118,14 @@
                 <div class="winner" style="display: none;">
                     <div class="row">
                         <div class="col-lg-4">
-                            <img src="~/img/celeb.gif" class="" width="" height="300px">
+                            <img src="~/img/stars.gif" class="" width="" height="300px">
                         </div>
                         <div class="col-lg-4">
                             <h1>Congratulations, <strong><span id="winnerName"></span></strong> </h1>
                             <h1>You have Won Rs. <strong><span id="totalAmount">@ViewBag.TotalAmount</span></strong> </h1>
                         </div>
                         <div class="col-lg-4">
-                            <img src="~/img/celeb.gif" class="" width="" height="300px">
+                            <img src="~/img/stars.gif" class="" width="" height="300px">
                         </div>
                     </div>
                 </div>
@@ -104,6 +148,7 @@
                 <!-- Center the Back button -->
                 <div class="form-group">
                     <a href="javascript:history.back()" class="btn btn-secondary btn-back">Back</a>
+                    <img src="~/img/logo.png" alt="Bottom Right Image" class="bottom-right-image" />
                 </div>
             </div>
         </div>
@@ -147,6 +192,7 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://www.dafontfree.net/embed/Y2xhcmVuZG9uLWJvbGQmZGF0YS8xL2MvOTIvdW5pY29kZS5jbGFyZW5kYi50dGY" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Iceland&family=Jockey+One&family=Silkscreen&family=Slackey&family=Special+Elite&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

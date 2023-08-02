@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rwekkpDpYIsWfEop/GZsOVSo7gAFBIi0lAqVKhZJjJc=",
+  "Hash": "V/Jf24ukKda9pgSZu6rG4fq6jAvUmMP8dovsFzIrbwQ=",
   "Source": "TechnoFexLotterySystem",
   "BasePath": "_content/TechnoFexLotterySystem",
   "Mode": "Default",
@@ -136,6 +136,23 @@
       "OriginalItemSpec": "wwwroot\\img\\celeb.gif"
     },
     {
+      "Identity": "C:\\Users\\sharm\\Desktop\\Lottery\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\wwwroot\\img\\firework.gif",
+      "SourceId": "TechnoFexLotterySystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sharm\\Desktop\\Lottery\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\wwwroot\\",
+      "BasePath": "_content/TechnoFexLotterySystem",
+      "RelativePath": "img/firework.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\firework.gif"
+    },
+    {
       "Identity": "C:\\Users\\sharm\\Desktop\\Lottery\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\wwwroot\\img\\logo.png",
       "SourceId": "TechnoFexLotterySystem",
       "SourceType": "Discovered",
@@ -168,6 +185,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\picmix.com_1540818.gif"
+    },
+    {
+      "Identity": "C:\\Users\\sharm\\Desktop\\Lottery\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\wwwroot\\img\\stars.gif",
+      "SourceId": "TechnoFexLotterySystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sharm\\Desktop\\Lottery\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\wwwroot\\",
+      "BasePath": "_content/TechnoFexLotterySystem",
+      "RelativePath": "img/stars.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\stars.gif"
     },
     {
       "Identity": "C:\\Users\\sharm\\Desktop\\Lottery\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\wwwroot\\js\\site.js",
