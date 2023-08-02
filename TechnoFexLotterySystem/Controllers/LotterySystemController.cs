@@ -90,9 +90,8 @@ public class LotterySystemController : Controller
                 if (decimal.TryParse(GetCellValue(workbookPart, amountCell), out decimal amount))
                 {
                     winner.Amount = amount.ToString();
-                    totalAmount += amount;
+                    
                 }
-
                 // Calculate the total amount from the selected column (column D) for all rows
                 foreach (Row row in sheetData.Elements<Row>())
                 {

@@ -25,12 +25,20 @@
       "PackagePath": "staticwebassets\\img\\celeb.gif"
     },
     {
+      "Id": "C:\\Users\\sharm\\Desktop\\Lottery\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\wwwroot\\img\\firework.gif",
+      "PackagePath": "staticwebassets\\img\\firework.gif"
+    },
+    {
       "Id": "C:\\Users\\sharm\\Desktop\\Lottery\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\wwwroot\\img\\logo.png",
       "PackagePath": "staticwebassets\\img\\logo.png"
     },
     {
       "Id": "C:\\Users\\sharm\\Desktop\\Lottery\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\wwwroot\\img\\picmix.com_1540818.gif",
       "PackagePath": "staticwebassets\\img\\picmix.com_1540818.gif"
+    },
+    {
+      "Id": "C:\\Users\\sharm\\Desktop\\Lottery\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\wwwroot\\img\\stars.gif",
+      "PackagePath": "staticwebassets\\img\\stars.gif"
     },
     {
       "Id": "C:\\Users\\sharm\\Desktop\\Lottery\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\wwwroot\\js\\site.js",
