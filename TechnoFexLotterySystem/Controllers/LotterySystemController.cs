@@ -74,6 +74,7 @@ public class LotterySystemController : Controller
 
             if (rowCount > 0)
             {
+
                 // Generate a random row index (from 1 to rowCount)
                 Random random = new Random();
                 int randomRowIndex = random.Next(1, rowCount + 1);
@@ -90,7 +91,7 @@ public class LotterySystemController : Controller
                 if (decimal.TryParse(GetCellValue(workbookPart, amountCell), out decimal amount))
                 {
                     winner.Amount = amount.ToString();
-                    totalAmount += amount;
+                   
                 }
 
                 // Calculate the total amount from the selected column (column D) for all rows
