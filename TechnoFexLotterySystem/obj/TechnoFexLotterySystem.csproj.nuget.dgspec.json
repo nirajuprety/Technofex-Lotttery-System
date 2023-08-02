@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sharm\\Desktop\\Lottery\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\TechnoFexLotterySystem.csproj": {}
+    "F:\\LotterySystem\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\TechnoFexLotterySystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sharm\\Desktop\\Lottery\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\TechnoFexLotterySystem.csproj": {
+    "F:\\LotterySystem\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\TechnoFexLotterySystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sharm\\Desktop\\Lottery\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\TechnoFexLotterySystem.csproj",
+        "projectUniqueName": "F:\\LotterySystem\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\TechnoFexLotterySystem.csproj",
         "projectName": "TechnoFexLotterySystem",
-        "projectPath": "C:\\Users\\sharm\\Desktop\\Lottery\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\TechnoFexLotterySystem.csproj",
-        "packagesPath": "C:\\Users\\sharm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sharm\\Desktop\\Lottery\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\obj\\",
+        "projectPath": "F:\\LotterySystem\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\TechnoFexLotterySystem.csproj",
+        "packagesPath": "C:\\Users\\SAMIKSHA\\.nuget\\packages\\",
+        "outputPath": "F:\\LotterySystem\\Technofex-Lotttery-System\\TechnoFexLotterySystem\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\sharm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\SAMIKSHA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
